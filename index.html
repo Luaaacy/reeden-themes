@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>季月的Reeden主题 | 精致阅读美学</title>
     <style>
+
+        
         /* ================= 核心变量与高级排版 ================= */
         :root {
             --xhs-red: #E13240;
@@ -32,22 +34,22 @@
         }
 
         /* ================= 首页：头部与搜索 ================= */
-        header {
-            padding: 4.5rem 1.5rem 1.8rem;
-            text-align: center;
-        }
-        .brand-title {
-            font-size: 2.2rem;
-            font-weight: normal;
-            letter-spacing: 2px;
-            margin: 0 0 10px 0;
-        }
-        .brand-subtitle {
-            font-size: 0.82rem;
-            color: var(--text-gray);
-            letter-spacing: 4px;
-            text-transform: uppercase;
-        }
+        /* 网页顶部：英文字母边框设计 */
+header {
+    padding: 2.5rem 1.5rem 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border-light);
+    margin-bottom: 2rem;
+}
+.brand-marquee {
+    font-size: 0.78rem;
+    color: var(--text-gray);
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    font-family: var(--font-serif);
+    white-space: nowrap;
+    overflow: hidden;
+}
 
         /* 1. 搜索框：极简悬浮胶囊 */
         .search-container {
@@ -85,119 +87,151 @@
 
         /* 2. 个人名片：杂志插页风精致名片 */
         .profile-card {
-            max-width: 420px;
-            margin: 0 auto 2.5rem;
-            padding: 1.1rem 1.5rem;
-            background: #FFFFFF;
-            border: 1px solid rgba(0, 0, 0, 0.06);
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            box-sizing: border-box;
-            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.04);
-            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .profile-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 14px 35px -8px rgba(0, 0, 0, 0.07);
-            border-color: rgba(0, 0, 0, 0.12);
-        }
-        .profile-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            object-fit: cover;
-            padding: 2px;
-            border: 1px solid rgba(225, 50, 64, 0.25);
-            flex-shrink: 0;
-            transition: transform 0.4s ease;
-        }
-        .profile-card:hover .profile-avatar {
-            transform: rotate(5deg) scale(1.03);
-        }
-        .profile-info {
-            flex-grow: 1;
-            overflow: hidden;
-        }
-        .profile-name {
-            font-size: 1.02rem;
-            font-family: var(--font-serif);
-            margin: 0 0 3px 0;
-            color: var(--text-main);
-            font-weight: 500;
-            letter-spacing: 0.5px;
-        }
-        .profile-id {
-            font-size: 0.76rem;
-            color: var(--text-gray);
-            letter-spacing: 0.5px;
-            margin: 0;
-        }
-        .profile-btn {
-            font-size: 0.75rem;
-            padding: 7px 15px;
-            color: var(--xhs-red);
-            background: rgba(225, 50, 64, 0.05);
-            border: 1px solid rgba(225, 50, 64, 0.3);
-            text-decoration: none;
-            border-radius: 20px;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-            transition: all 0.3s ease;
-            white-space: nowrap;
-        }
-        .profile-btn:hover {
-            background: var(--xhs-red);
-            color: #FFFFFF;
-            border-color: var(--xhs-red);
-            box-shadow: 0 4px 12px rgba(225, 50, 64, 0.25);
-        }
+    max-width: 420px;
+    margin: 0 auto 2rem;
+    padding: 1rem 1.5rem;
+    background: transparent;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    box-shadow: none;
+}
+.profile-avatar-wrapper {
+    position: relative;
+    padding: 4px;
+    border: 1px solid rgba(225, 50, 64, 0.35); /* 淡红色线条外层包裹 */
+    border-radius: 50%;
+    margin-bottom: 12px;
+    transition: transform 0.4s ease;
+}
+.profile-card:hover .profile-avatar-wrapper {
+    transform: scale(1.05);
+}
+.profile-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+.profile-info {
+    margin-bottom: 12px;
+}
+.profile-name {
+    font-size: 1.05rem;
+    font-family: var(--font-serif);
+    margin: 0 0 4px 0;
+    color: var(--text-main);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+.profile-id {
+    font-size: 0.78rem;
+    color: var(--text-gray);
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+.profile-btn {
+    font-size: 0.78rem;
+    padding: 6px 18px;
+    color: var(--xhs-red);
+    background: rgba(225, 50, 64, 0.05);
+    border: 1px solid rgba(225, 50, 64, 0.3);
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+.profile-btn:hover {
+    background: var(--xhs-red);
+    color: #FFFFFF;
+    border-color: var(--xhs-red);
+    box-shadow: 0 4px 12px rgba(225, 50, 64, 0.25);
+}
 
-        /* 3. 使用须知：衬线典雅告示板 */
+        /* 3. 使用须知：极简报刊文本区 */
         .notice-board {
-            max-width: 680px;
-            margin: 0 auto 4.5rem;
-            padding: 2.2rem 2.5rem;
-            background: linear-gradient(180deg, #FFFFFF 0%, #FAFAFA 100%);
-            border: 1px solid #EAEAEA;
-            border-radius: 16px;
-            text-align: center;
-            font-size: 0.86rem;
-            color: #555555;
-            line-height: 1.95;
+            max-width: 100%;
+            margin: 0 0 2rem 0;
+            padding: 2rem 0;
+            background: transparent;
+            border: none;
+            border-bottom: none; /* 已按要求删除下方横线 */
+            border-radius: 0;
+            text-align: justify; /* 文本两端对齐，符合报纸排版规则 */
+            font-size: 0.85rem;
+            color: #333;
+            line-height: 2.2;
             box-sizing: border-box;
-            width: calc(100% - 3rem);
+            width: 100%;
             position: relative;
-            box-shadow: 0 12px 36px -12px rgba(0, 0, 0, 0.03);
+            box-shadow: none;
         }
         .notice-board::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 50px;
-            height: 2px;
-            background: var(--xhs-red);
-            border-radius: 0 0 2px 2px;
-            opacity: 0.8;
+            display: none; /* 移除原来的顶层红线 */
+        }
+
+        /* ================= 左右两列整体布局 (新增) ================= */
+        .page-layout {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 320px 1fr; /* 左侧固定约320px，右侧自适应撑满 */
+            gap: 4rem;
+            align-items: start;
+        }
+        .left-sidebar {
+            position: sticky;
+            top: 2rem; /* 滚动时左侧悬浮固定 */
+        }
+        .right-content {
+            width: 100%;
+            min-width: 0; /* 防止网格溢出 */
+        }
+        /* 覆盖原本网格容器在两列布局下的宽度和边距限制 */
+        .right-content .sort-container {
+            max-width: 100%;
+            padding: 0;
+            margin: 0 0 1rem 0;
+        }
+        .right-content .grid-container {
+            max-width: 100%;
+            padding: 0;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* 右侧主题列表自适应网格 */
         }
         .notice-board h3 {
-            margin: 0 0 1.2rem 0;
-            font-size: 0.88rem;
+            margin: 0 0 1.5rem 0;
+            font-size: 0.95rem;
             color: var(--text-main);
-            letter-spacing: 4px;
-            font-weight: 600;
+            letter-spacing: 0.2em;
+            font-weight: bold;
             text-transform: uppercase;
-            opacity: 0.9;
+            position: relative;
+            padding-left: 12px;
+        }
+        .notice-board h3::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 3px;
+            height: 12px;
+            background-color: var(--xhs-red);
+            border-radius: 2px;
         }
         .notice-board strong {
             color: var(--xhs-red);
-            font-weight: 600;
-            background: rgba(225, 50, 64, 0.06);
-            padding: 2px 8px;
+            font-weight: 500;
+            background: rgba(225, 50, 64, 0.08);
+            padding: 2px 6px;
             border-radius: 4px;
+            border-bottom: none;
             margin: 0 2px;
         }
 
@@ -376,7 +410,8 @@
    .detail-subtitle {
     font-size: 0.85rem;
     color: var(--text-gray);
-    font-family: var(--font-serif);
+    /* 核心修改：将英文字体和西文斜体优先指定为更高级的排版字体，中文自动回退 */
+    font-family: 'Playfair Display', Georgia, var(--font-serif);
     font-style: italic;
     font-weight: 300; /* 细线条 */
     letter-spacing: 1px;
@@ -396,16 +431,44 @@
         }
 
         /* ================= 主题详细信息参数面板样式 ================= */
-        .theme-specs {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            margin-bottom: 2rem;
-            padding: 1.2rem 1.5rem;
-            background: #FFFFFF;
-            border: 1px solid var(--border-light);
-            box-sizing: border-box;
-        }
+.theme-specs {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 2rem;
+    padding: 0.5rem 0; /* 取消大内边距，使间距更紧凑 */
+    background: transparent; /* 去除背景色 */
+    border: none;            /* 去除外边框 */
+    border-radius: 0;
+    box-sizing: border-box;
+}
+.spec-category-title {
+    font-family: var(--font-serif);
+    font-size: 0.8rem;
+    color: var(--text-main);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    padding: 4px 8px 4px 14px; /* 上、右、下、左的内边距。左侧留出 14px 空间给竖条和左边缘 */
+    background-color: #F0F0F0;  /* 整体淡灰色背景，会延伸到小竖条下方 */
+    border-radius: 3px;         /* 整体背景的小圆角 */
+    position: relative;
+    font-weight: 600;
+    display: inline-block;      /* 让背景色只撑满文字区域，不会通栏撑大 */
+}
+
+/* 标题前方的黑色竖条 */
+.spec-category-title::before {
+    content: "";
+    position: absolute;
+    left: 4px;                  /* 距离背景左边缘 4px 的位置放置竖条 */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 12px;
+    background-color: var(--text-main);
+    border-radius: 2px;
+}
         .spec-item {
             display: flex;
             justify-content: space-between;
@@ -458,7 +521,7 @@
         .btn {
             display: block; width: 100%; text-align: center;
             padding: 14px 0; font-size: 0.9rem; letter-spacing: 1px;
-            text-decoration: none; border-radius: 2px; cursor: pointer;
+            text-decoration: none; border-radius: 8px; cursor: pointer; /* 将圆角从2px加大到8px，变得更加温润美观 */
             transition: all 0.3s; box-sizing: border-box; font-family: var(--font-sans);
         }
         .btn-xhs {
@@ -547,7 +610,19 @@
                 order: -1; /* 手机端让文字信息显示在图片上方 */
             }
             .grid-container {
-                gap: 2rem; padding: 0 1.5rem;
+                gap: 2rem; padding: 0;
+            }
+            /* 手机端取消左右两列，改为上下单列顺延，且名片与notice在上，主题列表在后 */
+            .page-layout {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 0 1.5rem;
+            }
+            .left-sidebar {
+                position: static;
+            }
+            .profile-card, .search-container, .notice-board {
+                max-width: 100%;
             }
         }
     </style>
@@ -555,47 +630,59 @@
 <body>
 
     <!-- ================= 首页部分 ================= -->
-    <header>
-        <h1 class="brand-title">季月的 Reeden</h1>
-        <div class="brand-subtitle">Exquisite Reading Themes</div>
-    </header>
+<header>
+    <div class="brand-marquee">R E E D E N &nbsp;&nbsp; T H E M E &nbsp;&nbsp; <span style="color: rgba(225, 50, 64, 0.6);">✦</span> &nbsp;&nbsp; R E A D I N G &nbsp;&nbsp; A E S T H E T I C S</div>
+</header>
 
-    <div class="search-container">
-        <input type="text" id="searchInput" class="search-input" placeholder="Search themes...">
-    </div>
+<!-- ================= 左右两列整体包裹容器 ================= -->
+    <div class="page-layout">
+        
+        <!-- 左侧栏：包含个人名片、搜索框、使用须知(Notice) -->
+        <div class="left-sidebar">
+            <!-- 个人名片组件 -->
+            <div class="profile-card">
+                <div class="profile-avatar-wrapper">
+                    <img src="./images/头像.png" alt="Avatar" class="profile-avatar" onerror="this.src='https://via.placeholder.com/150/eeeeee/aaaaaa?text=Avatar'">
+                </div>
+                <div class="profile-info">
+                    <h3 class="profile-name">季月无序</h3>
+                    <p class="profile-id">小红书号：115103696</p>
+                </div>
+                <a href="https://xhslink.cn/o/4T7Hi5dvXeB" target="_blank" class="profile-btn">关注主页 ✦</a>
+            </div>
 
-    <!-- 个人名片组件 -->
-    <div class="profile-card">
-        <img src="./images/头像.png" alt="Avatar" class="profile-avatar" onerror="this.src='https://via.placeholder.com/150/eeeeee/aaaaaa?text=Avatar'">
-        <div class="profile-info">
-            <h3 class="profile-name">季月无序</h3>
-            <p class="profile-id">小红书号：115103696</p>
+            <div class="search-container" style="padding: 0; margin: 0 auto 1.5rem;">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search themes...">
+            </div>
+
+            <div class="notice-board">
+                <h3 class="serif">NOTICE</h3>
+                只做Reeden<br>
+                主题文件都是red格式加密<br>
+                其他软件需要私信我获取未加密文件<br>
+                由于直接私发网盘链接不方便，所以建了个专门分享主题的网站，小红书发不了就发这里<br>
+                领主题点击<strong>获取网盘文件</strong><br>
+                下载需提取码，请前往小红书 <strong>点赞 + 关注</strong> 后私信我获取最新提取码<br>
+                网盘链接和提取码会不定期更换
+            </div>
         </div>
-        <a href="https://xhslink.cn/o/4T7Hi5dvXeB" target="_blank" class="profile-btn">关注主页 ✦</a>
-    </div>
 
-    <div class="notice-board">
-        <h3 class="serif">NOTICE</h3>
-        只做Reeden<br>
-        主题文件都是red格式加密<br>
-        其他软件需要私信我获取未加密文件<br>
-        由于直接私发网盘链接不方便，所以建了个专门分享主题的网站，小红书发不了就发这里<br>
-        领主题点击<strong>获取网盘文件</strong><br>
-        下载需提取码，请前往小红书 <strong>点赞 + 关注</strong> 后私信我获取最新提取码<br>
-        网盘链接和提取码会不定期更换
-    </div>
+        <!-- 右侧栏：包含排序控件与主题列表 -->
+        <div class="right-content">
+            <!-- 排序控件 -->
+            <div class="sort-container">
+                <button id="sortBtn" class="sort-btn">
+                    <span id="sortText">Date: Newest</span>
+                    <span id="sortIcon" class="sort-icon">↓</span>
+                </button>
+            </div>
 
-    <!-- 排序控件 -->
-    <div class="sort-container">
-        <button id="sortBtn" class="sort-btn">
-            <span id="sortText">Date: Newest</span>
-            <span id="sortIcon" class="sort-icon">↓</span>
-        </button>
-    </div>
+            <!-- 主题卡片网格 -->
+            <div class="grid-container" id="themeGrid">
+            <!-- 卡片数据将通过 themes.js 自动加载 -->
+            </div>
+        </div>
 
-    <!-- 主题卡片网格 -->
-    <div class="grid-container" id="themeGrid">
-    <!-- 卡片数据将通过 themes.js 自动加载 -->
     </div>
 
     <footer>
@@ -622,6 +709,7 @@
                 
                 <!-- 主题详细信息参数面板 -->
                 <div class="theme-specs">
+                    <div class="spec-category-title"><span>THEME SPECIFICATIONS</span></div>
                     <div class="spec-item">
                         <span class="spec-label">启动图</span>
                         <span class="spec-value" id="specStartup">有</span>

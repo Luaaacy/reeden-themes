@@ -36,7 +36,7 @@
         /* ================= 首页：头部与搜索 ================= */
         /* 网页顶部：英文字母边框设计 */
 header {
-    padding: 2.5rem 1.5rem 1.5rem;
+    padding: 0.5rem 1.5rem 0.5rem;
     text-align: center;
     border-bottom: 1px solid var(--border-light);
     margin-bottom: 2rem;
@@ -160,9 +160,9 @@ header {
             padding: 2rem 0;
             background: transparent;
             border: none;
-            border-bottom: none; /* 已按要求删除下方横线 */
+            border-bottom: none; 
             border-radius: 0;
-            text-align: justify; /* 文本两端对齐，符合报纸排版规则 */
+            text-align: center; /* 核心：正文内容改为居中显示 */
             font-size: 0.85rem;
             color: #333;
             line-height: 2.2;
@@ -172,7 +172,7 @@ header {
             box-shadow: none;
         }
         .notice-board::before {
-            display: none; /* 移除原来的顶层红线 */
+            display: none; 
         }
 
         /* ================= 左右两列整体布局 (新增) ================= */
@@ -204,27 +204,55 @@ header {
             padding: 0;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* 右侧主题列表自适应网格 */
         }
+        
+        /* 核心：高级感居中标题，带有渐变细横线与中心彩色分割图标 */
         .notice-board h3 {
-            margin: 0 0 1.5rem 0;
+            margin: 0 0 1.8rem 0;
             font-size: 0.95rem;
-            color: var(--text-main);
-            letter-spacing: 0.2em;
-            font-weight: bold;
+            color: var(--xhs-red); /* 更改处：将标题文字颜色改为和小红书按钮一致的红色 */
+            letter-spacing: 0.3em;
+            font-weight: 700;
             text-transform: uppercase;
-            position: relative;
-            padding-left: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
         }
+        
+        /* 标题内部文字：通过间距让两侧图标与文字保持优雅距离 */
+        .notice-board h3 span {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* 插入与页面头部一致的彩色分割图标 ✦ */
+        .notice-board h3 span::before,
+        .notice-board h3 span::after {
+            content: "✦";
+            font-size: 0.75rem;
+            color: rgba(225, 50, 64, 0.6); /* 对应你要求的颜色 */
+            font-weight: normal;
+        }
+        
+        /* 左侧渐变横线：从图标旁向左淡出 */
         .notice-board h3::before {
             content: "";
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 3px;
-            height: 12px;
-            background-color: var(--xhs-red);
-            border-radius: 2px;
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(to left, rgba(180, 180, 180, 0.8), transparent);
+            margin-right: 15px;
         }
+        
+        /* 右侧渐变横线：从图标旁向右淡出 */
+        .notice-board h3::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(to right, rgba(180, 180, 180, 0.8), transparent);
+            margin-left: 15px;
+        }
+
         .notice-board strong {
             color: var(--xhs-red);
             font-weight: 500;
@@ -648,7 +676,7 @@ header {
                     <h3 class="profile-name">季月无序</h3>
                     <p class="profile-id">小红书号：115103696</p>
                 </div>
-                <a href="https://xhslink.cn/o/4T7Hi5dvXeB" target="_blank" class="profile-btn">关注主页 ✦</a>
+                <a href="https://xhslink.cn/o/4T7Hi5dvXeB" target="_blank" class="profile-btn">关注主页</a>
             </div>
 
             <div class="search-container" style="padding: 0; margin: 0 auto 1.5rem;">
@@ -656,13 +684,18 @@ header {
             </div>
 
             <div class="notice-board">
-                <h3 class="serif">NOTICE</h3>
+                <h3 class="serif"><span>NOTICE</span></h3>
                 只做Reeden<br>
                 主题文件都是red格式加密<br>
                 其他软件需要私信我获取未加密文件<br>
-                由于直接私发网盘链接不方便，所以建了个专门分享主题的网站，小红书发不了就发这里<br>
+                由于在小红书直接私发网盘链接不方便<br>
+                所以建了个专门分享主题的网页<br>
+                方便展示和跳转<br>
+                小红书发不了就发这里<br>
                 领主题点击<strong>获取网盘文件</strong><br>
-                下载需提取码，请前往小红书 <strong>点赞 + 关注</strong> 后私信我获取最新提取码<br>
+                下载需提取码<br>
+                请前往小红书 <strong>点赞 + 关注</strong> 后私信<br>
+                获取最新提取码<br>
                 网盘链接和提取码会不定期更换
             </div>
         </div>
@@ -739,7 +772,7 @@ header {
                 <div class="intro" id="detailIntro"></div>
                 
                 <div class="action-group">
-                    <a href="#" target="_blank" class="btn btn-xhs" id="detailXhsBtn">前往小红书支持 ✦</a>
+                    <a href="#" target="_blank" class="btn btn-xhs" id="detailXhsBtn">前往小红书支持</a>
                     <!-- 获取网盘按钮（免费主题显示） -->
                     <button class="btn btn-disk" id="detailDiskBtn">获取网盘文件 ☁</button>
                     <!-- 付费/福利主题专属引导提示 -->

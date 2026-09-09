@@ -799,8 +799,13 @@
                 }
             });
 
-            // 绑定小红书按钮事件
-            document.getElementById('detailXhsBtn').href = theme.xhsLink;
+            // 绑定小红书按钮事件（新增移动端唤起APP逻辑）
+            const xhsBtn = document.getElementById('detailXhsBtn');
+            xhsBtn.href = "javascript:void(0);"; // 阻止默认的网页直接跳转
+            xhsBtn.onclick = () => {
+                // 使用 xhsdiscover:// 尝试唤起小红书，失败则打开网页
+                openAppOrWeb('xhsdiscover://', theme.xhsLink);
+            };
 
             // 判断主题类型：付费主题 / 福利主题 / 免费主题
             const diskBtn = document.getElementById('detailDiskBtn');
@@ -838,11 +843,44 @@
             document.body.style.overflow = 'auto';
         }
 
+        function openAppOrWeb(schemeUrl, webUrl) {
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            
+            // 电脑端：直接在新标签页打开网页
+            if (!isMobile) {
+                window.open(webUrl, '_blank');
+                return;
+            }
+
+            // 移动端：尝试通过 URL Scheme 唤起 APP
+            window.location.href = schemeUrl;
+
+            // 设置 2秒 的延时器作为兜底方案
+            const start = Date.now();
+            let timer = setTimeout(() => {
+                const now = Date.now();
+                // 如果当前时间距离开始时间不到 2500 毫秒，说明浏览器没有被切到后台
+                // 意味着 APP 唤起失败（未安装），则回退执行跳转网页
+                if (now - start < 2500) {
+                    window.location.href = webUrl;
+                }
+            }, 2000);
+
+            // 监听页面可见性变化：如果成功跳转到了 APP，当前页面会被隐藏
+            window.addEventListener('visibilitychange', function onVisibilityChange() {
+                if (document.hidden) {
+                    clearTimeout(timer); // 成功唤起，清除定时器，不再跳转网页
+                    window.removeEventListener('visibilitychange', onVisibilityChange);
+                }
+            });
+        }
+
         /* --- 2. 防抓包：动态解密跳转逻辑 --- */
         function openNetdisk(base64Str) {
             try {
                 const realUrl = atob(base64Str.trim());
-                window.open(realUrl, '_blank');
+                // 使用 baiduyun:// 尝试唤起百度网盘，失败则打开网页
+                openAppOrWeb('baiduyun://', realUrl);
             } catch (e) {
                 alert("链接解析失败，请联系站长获取。");
             }

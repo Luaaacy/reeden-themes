@@ -71,7 +71,7 @@ const paidThemesData = [
         readBg: "1个",
         highlight: "对话，首字下沉",
         intro: "极简！极简！极简！<br><br>这款并非冷冰冰的现代极简<br><br>而是加入珍珠元素，更加精致柔和的法式极简<br><br>依然是简约基础百搭款<br><br>最开始设想的是复杂些的风格<br><br>用几种元素的素材都想好了<br><br>做起来发现又是极简<br><br>上机直接美一大跳<br><br>喜欢极简风的宝们千万不要错过<br><br>四种颜色：白色、珍珠灰，粉紫，浅咖<br><br>珍珠灰不是纯色，背景底色有贝母纹理<br><br>四种颜色的阅读页面均设计了不同的样式<br><br>本来是想做更多颜色的<br><br>但没有图片的款式反而更难做<br><br>想样式想好多天<br><br>放弃了...",
-        xhsLink: "https://xhslink.cn/o/9E6oxgrMohI", // 填写对应小红书笔记链接
+        xhsLink: "https://xhslink.cn/o/8w3fekzHADw", // 填写对应小红书笔记链接
     }
 
 ];

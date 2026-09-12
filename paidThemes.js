@@ -54,6 +54,24 @@ const paidThemesData = [
         xhsLink: "https://xhslink.cn/o/9E6oxgrMohI", // 填写对应小红书笔记链接
         noticeTitle: "✦ 返图福利款 ✦", // 提示框小标题（可选，不写默认显示 BENEFIT THEME）
         noticeText: "此主题为<strong>购买小生活九色全套</strong>返图福利款！<br><br>请前往小红书该笔记下<strong>点赞+关注并带图评论</strong>，私信凭截图领取。" // 领取要求（每次可以自由修改，支持 <strong>加粗</strong>）
+    },
+    {
+        isPaid: true, // 关键标识：设置为 true 代表付费主题
+        search: "Pearl 简约 极简 凝光 珍珠 四色 多色 基础 百搭 法式 优雅 温柔 柔和",
+        coverImg: "./images/Pearl/预览首图.png",
+        date: "Sep 12, 2026",
+        title: "Pearl · 凝光",
+        subtitle: "Born from the silent tide.",
+        tags: ["简约", "极简", "法式", "优雅", "珍珠", "柔和", "四色"],
+        detailImgs: "./images/Pearl/预览首图.png,./images/Pearl/预览白.png,./images/Pearl/预览珍珠灰.png,./images/Pearl/预览粉.png,./images/Pearl/预览浅咖.png",
+        startup: "有",
+        carousel: "4个",
+        cover: "1个",
+        homeBg: "有",
+        readBg: "1个",
+        highlight: "对话，首字下沉",
+        intro: "极简！极简！极简！<br><br>这款并非冷冰冰的现代极简<br><br>而是加入珍珠元素，更加精致柔和的法式极简<br><br>依然是简约基础百搭款<br><br>最开始设想的是复杂些的风格<br><br>用几种元素的素材都想好了<br><br>做起来发现又是极简<br><br>上机直接美一大跳<br><br>喜欢极简风的宝们千万不要错过<br><br>四种颜色：白色、珍珠灰，粉紫，浅咖<br><br>珍珠灰不是纯色，背景底色有贝母纹理<br><br>四种颜色的阅读页面均设计了不同的样式<br><br>本来是想做更多颜色的<br><br>但没有图片的款式反而更难做<br><br>想样式想好多天<br><br>放弃了...",
+        xhsLink: "https://xhslink.cn/o/9E6oxgrMohI", // 填写对应小红书笔记链接
     }
 
 ];

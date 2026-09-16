@@ -152,6 +152,39 @@ header {
     border-color: var(--xhs-red);
     box-shadow: 0 4px 12px rgba(225, 50, 64, 0.25);
 }
+/* 新增：QQ群按钮专属样式 (QQ蓝色调) */
+        .qq-btn {
+            margin-top: 12px; /* 和上面的关注按钮拉开间距 */
+            color: #12B7F5;
+            background: rgba(18, 183, 245, 0.05);
+            border: 1px solid rgba(18, 183, 245, 0.3);
+        }
+        .qq-btn:hover {
+            background: #12B7F5;
+            color: #FFFFFF;
+            border-color: #12B7F5;
+            box-shadow: 0 4px 12px rgba(18, 183, 245, 0.25);
+        }
+
+        /* 新增：QQ二维码弹窗卡片样式 */
+        .qr-modal {
+            background: #fff; 
+            /* 核心修改：大幅度缩小内边距，上左右留出极小边距，下方稍微多留一点给文字 */
+            padding: 10px 10px 15px 10px; 
+            width: 85%; 
+            max-width: 320px; 
+            text-align: center; 
+            font-family: var(--font-sans);
+            border-radius: 16px; 
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+
+        .qr-modal img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
 
         /* 3. 使用须知：极简报刊文本区 */
         .notice-board {
@@ -677,6 +710,7 @@ header {
                     <p class="profile-id">小红书号：115103696</p>
                 </div>
                 <a href="https://xhslink.cn/o/4T7Hi5dvXeB" target="_blank" class="profile-btn">关注主页</a>
+                <button class="profile-btn qq-btn" onclick="showQQModal()">加入Q群</button>
             </div>
 
             <div class="search-container" style="padding: 0; margin: 0 auto 1.5rem;">
@@ -782,6 +816,14 @@ header {
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- ================= QQ群二维码弹窗 ================= -->
+    <div class="modal-overlay" id="qqModalOverlay" onclick="closeQQModal()">
+        <div class="qr-modal" onclick="event.stopPropagation()">
+            <img src="./images/群码.png" alt="QQ群二维码">
+            <p style="font-size: 0.85rem; color: #888; margin: 4px 0 0 0; letter-spacing: 1px;">请截屏或扫码加入</p>
         </div>
     </div>
 
@@ -1012,6 +1054,16 @@ header {
             adminModal.style.display = 'none';
             document.getElementById('rawUrl').value = '';
             document.getElementById('encryptedResult').value = '';
+        }
+        /* --- 5. QQ群二维码弹窗控制逻辑 --- */
+        function showQQModal() {
+            const qqModal = document.getElementById('qqModalOverlay');
+            qqModal.style.display = 'flex';
+        }
+
+        function closeQQModal() {
+            const qqModal = document.getElementById('qqModalOverlay');
+            qqModal.style.display = 'none';
         }
     </script>
 </body>

@@ -119,9 +119,27 @@ const themesData = [
         homeBg: "1个",
         readBg: "1个",
         highlight: "对话",
-        intro: "一个韩系Kpop主题<br><br>仿的是QQ音乐浅色轻盈彩胶播放器样式<br><br>看到的时候就觉得非常适合做成主题<br><br>但我失败了，好像毁了<br><br>就这样吧<br><br>图片找了很久，都是QQ音乐的专辑封面图<br><br>按照合适的颜色选的图，和个人喜好、排名无关<br><br>大家可以二改自己喜欢的图片<br><br>有小生活紫色版的也可以搭配紫色日历轮播图，非常适配！",
+        intro: "一个韩系Kpop主题<br><br>仿的是QQ音乐浅色轻盈彩胶播放器样式<br><br>看到的时候就觉得非常适合做成主题<br><br>但我失败了，好像毁了<br><br>就这样吧<br><br>图片找了很久，都是QQ音乐的专辑封面图<br><br>按照合适的颜色选的图，和个人喜好、排名无关<br><br>大家可以二改自己喜欢的图片<br><br>二改版也可以发到我的Q群分享~<br><br>有小生活紫色版的也可以搭配紫色日历轮播图，非常适配！",
         xhsLink: "https://xhslink.cn/o/7kgDhK5qp0E",
         diskBase64: "aHR0cHM6Ly9wYW4uYmFpZHUuY29tL3MvMVdnZUJ0djNEeTVrbmdLM3RsRmJGZWc="
+    },
+    {
+        search: "Kpop 简约 韩系 清透 玻璃 红色",
+        coverImg: "./images/Kpop/红色首图.jpg",
+        date: "Sep 7, 2026",
+        title: "Kpop红",
+        subtitle: "어둠이 드리워질 때도 겁내지 마 너무 아름다워서 꽃잎 활짝 펴서",
+        tags: ["简约", "韩系", "清透", "玻璃", "红色"],
+        detailImgs: "./images/Kpop/红色首图.jpg,./images/Kpop/红色1.jpg,./images/Kpop/红色2.jpg,",
+        startup: "有",
+        carousel: "2个",
+        cover: "9个专辑封面",
+        homeBg: "1个",
+        readBg: "2个",
+        highlight: "对话",
+        intro: "一个韩系Kpop主题<br><br>仿的是QQ音乐浅色轻盈彩胶播放器样式<br><br>看到的时候就觉得非常适合做成主题<br><br>但好像没那味<br><br>图片找了很久，都是QQ音乐的专辑封面图，很亮眼<br><br>按照合适的颜色选的图，和个人喜好、排名无关<br><br>大家可以二改自己喜欢的图片<br><br>二改版也可以发到我的Q群分享~<br><br>原版阅读背景底色加了红色，替换阅读背景是纯白，更干净",
+        xhsLink: "https://xhslink.cn/o/9TZjQ6Kn84W",
+        diskBase64: "aHR0cHM6Ly9wYW4uYmFpZHUuY29tL3MvMTlrdG1aM2FVb19LVVZvcWpjb0VvY1E/"
     },
     
 ];

@@ -72,6 +72,26 @@ const paidThemesData = [
         highlight: "对话，首字下沉",
         intro: "极简！极简！极简！<br><br>这款并非冷冰冰的现代极简<br><br>而是加入珍珠元素，更加精致柔和的法式极简<br><br>依然是简约基础百搭款<br><br>最开始设想的是复杂些的风格<br><br>用几种元素的素材都想好了<br><br>做起来发现又是极简<br><br>上机直接美一大跳<br><br>喜欢极简风的宝们千万不要错过<br><br>四种颜色：白色、珍珠灰，粉紫，浅咖<br><br>珍珠灰不是纯色，背景底色有贝母纹理<br><br>四种颜色的阅读页面均设计了不同的样式<br><br>本来是想做更多颜色的<br><br>但没有图片的款式反而更难做<br><br>想样式想好多天<br><br>放弃了...",
         xhsLink: "https://xhslink.cn/o/8w3fekzHADw", // 填写对应小红书笔记链接
-    }
+    },
+    {
+        isPaid: true, // 关键标识：设置为 true 代表付费主题
+        search: "Pearl 简约 极简 vintage 珍珠 画展 gallery 基础 百搭 法式 优雅",
+        coverImg: "./images/Pearl/画展预览首图.png",
+        date: "Sep 16, 2026",
+        title: "Pearl · vintage gallery",
+        subtitle: "返图福利款",
+        tags: ["简约", "珍珠", "vintage", "法式", "画展"],
+        detailImgs: "./images/Pearl/画展预览首图.png,./images/Pearl/画展预览2.jpg,./images/Pearl/画展预览3.jpg,./images/Pearl/画展预览4.jpg",
+        startup: "有",
+        carousel: "1个",
+        cover: "1个",
+        homeBg: "1个",
+        readBg: "2个版本，每个版本双色",
+        highlight: "对话",
+        intro: "一个简约黑白主题<br><br>珍珠画展，有点vintage味<br><br>做了两个版本的阅读背景，版本2绑在夜间模式<br><br>每个版本都有两个色<br><br>白色和灰色",
+        xhsLink: "https://xhslink.cn/o/2iKyxiWOlxX ", // 填写对应小红书笔记链接
+        noticeTitle: "✦ 返图福利款 ✦", // 提示框小标题（可选，不写默认显示 BENEFIT THEME）
+        noticeText: "此主题为<strong>购买Pearl·凝光全套四色</strong>返图福利款！<br><br>请前往小红书该笔记下<strong>点赞+关注并发帖返图</strong>，私信凭截图领取。" // 领取要求（每次可以自由修改，支持 <strong>加粗</strong>）
+    },
 
 ];

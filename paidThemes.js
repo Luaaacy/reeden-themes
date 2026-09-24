@@ -57,12 +57,12 @@ const paidThemesData = [
     },
     {
         isPaid: true, // 关键标识：设置为 true 代表付费主题
-        search: "Pearl 简约 极简 凝光 珍珠 四色 多色 基础 百搭 法式 优雅 温柔 柔和",
+        search: "Pearl 简约 极简 凝光 珍珠 四色 多色 基础 百搭 法式 优雅 温柔 柔和 日夜",
         coverImg: "./images/Pearl/预览首图.png",
         date: "Sep 12, 2026",
         title: "Pearl · 凝光",
         subtitle: "Born from the silent tide.",
-        tags: ["简约", "极简", "法式", "优雅", "珍珠", "柔和", "四色"],
+        tags: ["简约", "极简", "法式", "优雅", "珍珠", "柔和", "四色", "日夜"],
         detailImgs: "./images/Pearl/预览首图.png,./images/Pearl/预览白.png,./images/Pearl/预览珍珠灰.png,./images/Pearl/预览粉.png,./images/Pearl/预览浅咖.png",
         startup: "有",
         carousel: "4个",
@@ -92,6 +92,24 @@ const paidThemesData = [
         xhsLink: "https://xhslink.cn/o/2iKyxiWOlxX ", // 填写对应小红书笔记链接
         noticeTitle: "✦ 返图福利款 ✦", // 提示框小标题（可选，不写默认显示 BENEFIT THEME）
         noticeText: "此主题为<strong>购买Pearl·凝光全套四色</strong>返图福利款！<br><br>请前往小红书该笔记下<strong>点赞+关注并发帖返图</strong>，私信凭截图领取。" // 领取要求（每次可以自由修改，支持 <strong>加粗</strong>）
+    },
+    {
+        isPaid: true, // 关键标识：设置为 true 代表付费主题
+        search: "moon 简约 月光 蓝调 双色 日夜 氛围 温柔 柔和",
+        coverImg: "./images/私有月光/预览首图.png",
+        date: "Sep 21, 2026",
+        title: "私有月光",
+        subtitle: "Private moonlight for daytime dreamers.",
+        tags: ["简约", "柔和", "蓝调时刻", "氛围", "双版", "日夜"],
+        detailImgs: "./images/私有月光/预览首图.png,./images/私有月光/林中月预览图.png,./images/私有月光/水中影预览图.png,./images/私有月光/林中月夜预览图.png,./images/私有月光/水中影夜预览图.png",
+        startup: "有",
+        carousel: "1个（日间静态轮播，夜间均动态轮播）",
+        cover: "4个",
+        homeBg: "有",
+        readBg: "1个",
+        highlight: "通用对话，月亮标题（仅林中月），小月牙段评，月亮作话",
+        intro: "一个氛围感主题<br><br>🌙夜晚的蓝调时刻<br><br>这款喜欢的宝一定要去看视频展示<br><br>我认为图片完全无法展示它的美!!!<br><br>刚上机有点平平无奇<br><br>直到我给它配了软件自带的雪景特效<br><br>原来这才是打开它的正确方式吗？<br><br>————————<br><br>双色版本——林中月和水中影<br><br>两个版本都配有夜间墨黑色<br><br>虽然是日夜间，但这款三色都强烈推荐🌒傍晚以后用<br><br>打开一盏氛围灯<br><br>配一首歌<br><br>边听边读<br><br>夜晚的蓝调时刻<br><br>有人懂吗？",
+        xhsLink: "https://xhslink.cn/o/42Lkrh10zbe", // 填写对应小红书笔记链接
     },
 
 ];
